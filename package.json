@@ -1,7 +1,7 @@
 {
-  "name": "@mattermost/react-native-turbo-log",
-  "version": "0.6.0",
-  "description": "test",
+  "name": "@react-native-ohos/react-native-turbo-log",
+  "version": "0.6.1-rc.1",
+  "description": "File logger for React Native (TurboModules) with configurable rolling policy",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -10,13 +10,10 @@
   "files": [
     "src",
     "lib",
-    "android",
-    "ios",
+    "harmony",
     "cpp",
-    "mattermost-react-native-turbo-log.podspec",
     "!lib/typescript/example",
-    "!android/build",
-    "!ios/build",
+    "!harmony/build",
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__"
@@ -28,13 +25,18 @@
     "prepare": "bob build",
     "release": "release-it",
     "example": "npm run --prefix example",
-    "bootstrap": "npm i --prexix example && npm run example pods"
+    "bootstrap": "npm i --prexix example && npm run example pods",
+    "codegen-lib": "react-native codegen-lib-harmony --no-safety-check --npm-package-name @mattermost/react-native-turbo-log --cpp-output-path ./harmony/turbo_log/src/main/cpp/generated --ets-output-path ./harmony/turbo_log/src/main/ets/generated --turbo-modules-spec-paths ./src/NativeRNTurboLog.ts"
   },
   "keywords": [
     "react-native",
     "ios",
+    "harmony",
     "android"
   ],
+  "harmony": {
+		"alias": "@mattermost/react-native-turbo-log"
+	},
   "repository": "https://github.com/mattermost/react-native-turbo-log",
   "author": "Mattermost, Inc. <nahumhbl@gmail.com> (https://github.com/mattermost)",
   "license": "MIT",
@@ -66,11 +68,22 @@
     "react-native": "0.76.5",
     "react-native-builder-bob": "0.35.2",
     "release-it": "17.10.0",
+    "react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.37",
+    "@react-native-community/cli": "11.4.1",
     "typescript": "5.7.2"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
+  },
+  "overrides": {
+    "react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.37",
+    "@rnoh/react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.37",
+    "@react-native/codegen": "0.74.0"
+  },
+  "resolutions": {
+    "react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.37",
+    "@rnoh/react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.37"
   },
   "codegenConfig": {
     "name": "RNTurboLogSpec",
