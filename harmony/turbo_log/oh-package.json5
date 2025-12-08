@@ -1,5 +1,5 @@
 {
-  "name": "@react-native-oh-tpl/react-native-turbo-log",
+  "name": "@react-native-ohos/react-native-turbo-log",
   "main": "Index.ets",
   "types":  "module",
   "description": "example description",
