@@ -1,0 +1,9 @@
+{
+  "module": {
+    "name": "turbo_log",
+    "type": "har",
+    "deviceTypes": [
+      "default"
+    ]
+  }
+}

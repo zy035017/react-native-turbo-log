@@ -1,0 +1,10 @@
+{
+  "name": "@react-native-ohos/react-native-turbo-log",
+  "main": "Index.ets",
+  "types":  "module",
+  "description": "example description",
+  "version": "0.6.1-rc.1",
+  "dependencies": {
+    "@rnoh/react-native-openharmony": "file:../react-native-openharmony-0.72.90.har"
+  }
+}
