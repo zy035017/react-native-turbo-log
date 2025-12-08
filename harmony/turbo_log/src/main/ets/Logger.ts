@@ -51,4 +51,4 @@ class Logger {
   }
 }
 
-export default new Logger('TurboLog', 0xFF00, true);
+export default new Logger('TurboLog', 0xFF00, false);
