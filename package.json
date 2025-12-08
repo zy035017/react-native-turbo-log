@@ -1,6 +1,6 @@
 {
   "name": "@react-native-ohos/react-native-turbo-log",
-  "version": "0.6.1-rc.1",
+  "version": "0.7.0-rc.1",
   "description": "File logger for React Native (TurboModules) with configurable rolling policy",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
