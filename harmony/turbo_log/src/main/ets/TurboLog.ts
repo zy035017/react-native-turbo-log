@@ -289,7 +289,7 @@ export class TurboLog {
       return;
     }
     try {
-      const file = fs.openSync(TurboLog.currentLogFile, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
+      const file = fs.openSync(TurboLog.currentLogFile, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE | fs.OpenMode.APPEND);
       const encoder = new util.TextEncoder();
       const buffer = encoder.encodeInto(content);
       fs.writeSync(file.fd, buffer.buffer);
